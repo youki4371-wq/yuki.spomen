@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>匿名・無料｜スポーツのお悩み相談</title>
+<meta name="description" content="スポーツに関する悩みを匿名・無料で相談できます。選手・保護者・指導者の方、お気軽にご相談ください。">
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Noto Sans JP","Yu Gothic",sans-serif;color:#222;background:#fffaf2;line-height:1.8}
+  .wrap{max-width:760px;margin:auto;padding:0 18px}
+  header{padding:56px 0 42px;text-align:center;background:linear-gradient(135deg,#ff9f43,#ffd166)}
+  .badge{display:inline-block;background:#fff;border-radius:999px;padding:6px 16px;font-size:13px;font-weight:700;color:#d96d00;margin-bottom:18px}
+  h1{font-size:clamp(28px,7vw,46px);line-height:1.35;margin:0 0 16px;font-weight:800}
+  header p{margin:0;font-size:16px;font-weight:600}
+  section{background:#fff;margin:22px 0;padding:28px 22px;border-radius:20px;box-shadow:0 5px 20px rgba(0,0,0,.05)}
+  h2{font-size:22px;margin:0 0 18px}
+  .lead{font-size:17px}
+  ul{padding-left:22px;margin:0}
+  li{margin:7px 0}
+  .note{background:#fff7df;border-left:5px solid #ffad33;padding:14px 16px;border-radius:8px;font-size:14px}
+  label{display:block;font-weight:700;margin:20px 0 7px}
+  input,select,textarea{width:100%;padding:13px 14px;border:1px solid #ddd;border-radius:10px;font:inherit;background:#fff}
+  textarea{min-height:150px;resize:vertical}
+  .optional{font-size:12px;color:#888;font-weight:400;margin-left:6px}
+  button{width:100%;border:0;border-radius:999px;background:#f28c28;color:#fff;font-size:17px;font-weight:800;padding:15px;margin-top:24px;cursor:pointer}
+  button:hover{opacity:.9}
+  .privacy{font-size:12px;color:#777;margin-top:12px}
+  footer{text-align:center;padding:30px 0 45px;font-size:12px;color:#888}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="badge">匿名・無料で相談できます</div>
+    <h1>スポーツの悩み、<br>誰かに相談してみませんか？</h1>
+    <p>選手・保護者・指導者の方、どなたでもお気軽に。</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section>
+    <p class="lead">「こんなことで相談していいのかな？」という小さな悩みでも大丈夫です。</p>
+    <p>試合での緊張、ミスの引きずり、自信、モチベーション、子どもへの声かけ、チームづくりなど、スポーツに関するお悩みを匿名・無料で受け付けています。</p>
+  </section>
+
+  <section>
+    <h2>こんなお悩みありませんか？</h2>
+    <ul>
+      <li>試合になると緊張してしまう</li>
+      <li>ミスをするとずっと引きずってしまう</li>
+      <li>練習ではできるのに本番で力を出せない</li>
+      <li>自信を持ってプレーできない</li>
+      <li>モチベーションが上がらない</li>
+      <li>子どもへの声かけに悩んでいる</li>
+      <li>チームの雰囲気を良くしたい</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>匿名・無料相談</h2>
+    <div class="note">名前・電話番号・メールアドレスは必須ではありません。匿名で相談したい方は、個人を特定できる情報を書かないでください。</div>
+
+    <!-- 公開時にFormspree等のフォーム送信先へ action を変更してください -->
+    <form action="YOUR_FORM_ENDPOINT" method="POST">
+      <label for="role">あなたの立場 <span class="optional">任意</span></label>
+      <select id="role" name="role">
+        <option value="">選択してください</option>
+        <option>選手</option><option>保護者</option><option>指導者・監督・コーチ</option>
+        <option>チーム関係者</option><option>その他</option><option>答えたくない</option>
+      </select>
+
+      <label for="sport">スポーツ <span class="optional">任意</span></label>
+      <input id="sport" name="sport" placeholder="例：野球、サッカー、バスケ">
+
+      <label for="message">今、どんなことで悩んでいますか？ <span class="optional">必須</span></label>
+      <textarea id="message" name="message" required placeholder="できる範囲で自由に書いてください。"></textarea>
+
+      <label for="goal">どうなりたいですか？ <span class="optional">任意</span></label>
+      <textarea id="goal" name="goal" style="min-height:100px" placeholder="例：試合で緊張せず、自信を持ってプレーしたい"></textarea>
+
+      <label for="contact">回答を受け取りたいSNSアカウント等 <span class="optional">完全任意</span></label>
+      <input id="contact" name="contact" placeholder="匿名で相談する場合は空欄でOK">
+
+      <button type="submit">匿名・無料で相談を送る</button>
+      <p class="privacy">※相談内容は悩みへの回答を目的として取り扱います。緊急性の高い相談や医療・法律等の専門的判断が必要な内容には対応できない場合があります。</p>
+    </form>
+  </section>
+</main>
+
+<footer>Sports Mental Coach｜Anonymous & Free Consultation</footer>
+</body>
+</html>
